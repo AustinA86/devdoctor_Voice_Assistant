@@ -127,24 +127,30 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-6xl mx-auto space-y-8">
         
-        <header className="flex justify-between items-end">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Voice AI Automaton</h1>
-            <p className="text-gray-500 mt-2">Automated Order Confirmation Dashboard</p>
+        <header className="flex justify-between items-end bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div className="flex items-center gap-4">
+            <img src="/logo1.png" alt="Logo 1" className="h-16 w-auto" />
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">Voice AI Automaton</h1>
+              <p className="text-gray-500 mt-2">Automated Order Confirmation Dashboard</p>
+            </div>
           </div>
-          <div className="flex gap-4">
-            <button 
-              onClick={() => { setEditingId(null); setShowModal(true); }}
-              className="bg-indigo-50 text-indigo-700 border border-indigo-200 px-4 py-2 rounded-lg font-medium hover:bg-indigo-100 flex items-center"
-            >
-              <Plus className="mr-2 h-5 w-5" /> Add Customer
-            </button>
-            <button 
-              onClick={() => window.open("/simulator", "_blank", "width=400,height=850")}
-              className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 flex items-center"
-            >
-              <Phone className="mr-2 h-5 w-5" /> Open Simulator UI
-            </button>
+          <div className="flex items-center gap-6">
+            <img src="/logo2.png" alt="Logo 2" className="h-16 w-auto" />
+            <div className="flex gap-4">
+              <button 
+                onClick={() => { setEditingId(null); setShowModal(true); }}
+                className="bg-indigo-50 text-indigo-700 border border-indigo-200 px-4 py-2 rounded-lg font-medium hover:bg-indigo-100 flex items-center"
+              >
+                <Plus className="mr-2 h-5 w-5" /> Add Customer
+              </button>
+              <button 
+                onClick={() => window.open("/simulator", "_blank", "width=400,height=850")}
+                className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 flex items-center"
+              >
+                <Phone className="mr-2 h-5 w-5" /> Open Simulator UI
+              </button>
+            </div>
           </div>
         </header>
 

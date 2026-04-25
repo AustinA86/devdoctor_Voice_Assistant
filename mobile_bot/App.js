@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ActivityIndicator, Alert, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ActivityIndicator, Alert, Dimensions, Image } from 'react-native';
 import { Phone, PhoneOff, Mic, Grid3x3, StopCircle, Volume2 } from 'lucide-react-native';
 import axios from 'axios';
 import { Audio, InterruptionModeIOS } from 'expo-av';
@@ -193,6 +193,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       {callStatus === 'idle' && (
         <View style={styles.center}>
+          <Image source={require('./assets/logo.png')} style={{ width: 150, height: 150, marginBottom: 20, borderRadius: 20 }} />
           <View style={styles.phoneIconCircle}><Phone color="white" size={40}/></View>
           <Text style={styles.idleText}>Phone</Text>
           <Text style={styles.subText}>Waiting for confirmation calls...</Text>
@@ -202,6 +203,7 @@ export default function App() {
       {callStatus === 'ringing' && (
         <View style={styles.ringingView}>
           <View style={styles.header}>
+            <Image source={require('./assets/logo.png')} style={{ width: 80, height: 80, marginBottom: 20, borderRadius: 10 }} />
             <Text style={styles.callerName}>Automaton AI Office</Text>
             <Text style={styles.callType}>Incoming Call...</Text>
           </View>
